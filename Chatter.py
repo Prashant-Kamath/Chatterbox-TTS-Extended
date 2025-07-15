@@ -1,5 +1,12 @@
+import os
+import sys
 import random
 import numpy as np
+
+# Add bin directory to PATH for FFMPEG
+bin_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bin")
+if bin_dir not in os.environ["PATH"]:
+    os.environ["PATH"] = bin_dir + os.pathsep + os.environ["PATH"]
 import torch
 import os
 import re
